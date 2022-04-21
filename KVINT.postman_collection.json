@@ -1,0 +1,422 @@
+{
+	"info": {
+		"_postman_id": "9fd328b7-b33e-42be-9df1-73a6ea3ba029",
+		"name": "KVINT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authorize",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"login\": \"test-task\",\r\n  \"password\": \"yEhfvKs2YKpDfc4p8zFbT0z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.go.staging.kvint.io/auth/authorize",
+					"protocol": "https",
+					"host": [
+						"api",
+						"go",
+						"staging",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"auth",
+						"authorize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorize_Invalid_Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"login\": \"12345\",\r\n  \"password\": \"yEhfvKs2YKpDfc4p8zFbT0z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.go.staging.kvint.io/auth/authorize",
+					"protocol": "https",
+					"host": [
+						"api",
+						"go",
+						"staging",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"auth",
+						"authorize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorize_Empty_Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"login\": \"\",\r\n  \"password\": \"yEhfvKs2YKpDfc4p8zFbT0z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.go.staging.kvint.io/auth/authorize",
+					"protocol": "https",
+					"host": [
+						"api",
+						"go",
+						"staging",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"auth",
+						"authorize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorize_Invalid_Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"login\": \"test-task\",\r\n  \"password\": \"yEhfvKs2YKpDfc4p8zFbT0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.go.staging.kvint.io/auth/authorize",
+					"protocol": "https",
+					"host": [
+						"api",
+						"go",
+						"staging",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"auth",
+						"authorize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorize_Empty_Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"login\": \"test-task\",\r\n  \"password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.go.staging.kvint.io/auth/authorize",
+					"protocol": "https",
+					"host": [
+						"api",
+						"go",
+						"staging",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"auth",
+						"authorize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh_Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlblR5cGUiOiJhcHBfcmVmcmVzaCIsImlkIjoiNjI0YTk1Y2Y2MTJkZmIyYTY3NjNmM2E4IiwibmFtZSI6InRlc3QtdGFzayIsInByb2plY3QiOm51bGwsImlhdCI6MTY0OTQwNjQ0NywiZXhwIjoxNjUxOTk4NDQ3fQ.brmEzeA4NQ6xrf3LOpV_JrsbpvXFld2Z95Gqu32wC_g\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.go.staging.kvint.io/auth/refresh",
+					"protocol": "https",
+					"host": [
+						"api",
+						"go",
+						"staging",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации о кампании",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlblR5cGUiOiJhcHBfYWNjZXNzIiwiaWQiOiI2MjRhOTVjZjYxMmRmYjJhNjc2M2YzYTgiLCJuYW1lIjoidGVzdC10YXNrIiwicHJvamVjdCI6bnVsbCwiaWF0IjoxNjQ5NDI4NTQ3LCJleHAiOjE2NDk2ODc3NDd9.qCEY7lOdbf9YMQcna13pfqeZLVMhv6MxDUzSwzE9ASI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.go.staging.kvint.io/campaigns/5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"go",
+						"staging",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"campaigns",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Приостановка кампании",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.go.staging.kvint.io/campaigns/5/pause",
+					"protocol": "https",
+					"host": [
+						"api",
+						"go",
+						"staging",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"campaigns",
+						"5",
+						"pause"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запуск кампании",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.go.staging.kvint.io/campaigns/5/start",
+					"protocol": "https",
+					"host": [
+						"api",
+						"go",
+						"staging",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"campaigns",
+						"5",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавить одно задание в кампанию",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"campaignId\": 7,\r\n  \"task\": {\r\n    \"id\": \"string\",\r\n    \"phone\": \"string\",\r\n    \"tz\": 0,\r\n    \"priority\": 0,\r\n    \"callDate\": \"2021-01-01T12:00:00+03:00\",\r\n    \"data\": {}\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.go.staging.kvint.io/tasks/add",
+					"protocol": "https",
+					"host": [
+						"api",
+						"go",
+						"staging",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"tasks",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавить несколько заданий в кампанию одним запросом",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"campaignId\": 0,\r\n  \"tasks\": [\r\n    {\r\n      \"id\": \"string\",\r\n      \"phone\": \"string\",\r\n      \"tz\": 0,\r\n      \"priority\": 0,\r\n      \"callDate\": \"2021-01-01T12:00:00+03:00\",\r\n      \"data\": {}\r\n    }    \r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.go.staging.kvint.io/tasks/batch",
+					"protocol": "https",
+					"host": [
+						"api",
+						"go",
+						"staging",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"tasks",
+						"batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации о таске",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.go.staging.kvint.io/tasks/Fd9F3S1AV5fF9Yc7H2hcsI9?campaignId=7",
+					"protocol": "https",
+					"host": [
+						"api",
+						"go",
+						"staging",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"tasks",
+						"Fd9F3S1AV5fF9Yc7H2hcsI9"
+					],
+					"query": [
+						{
+							"key": "campaignId",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlblR5cGUiOiJhcHBfcmVmcmVzaCIsImlkIjoiNjI0YTk1Y2Y2MTJkZmIyYTY3NjNmM2E4IiwibmFtZSI6InRlc3QtdGFzayIsInByb2plY3QiOm51bGwsImlhdCI6MTY0OTY4ODA0MywiZXhwIjoxNjUyMjgwMDQzfQ.ipy5l5y0-6dp26hmtM8GNk--SNzPmtsaBs6Bf0ZUD_E",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
